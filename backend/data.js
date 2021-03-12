@@ -16,7 +16,7 @@ const data = {
   ],
     products: [
       {
-        _id: "1",
+        
         name: "Painting",
         category: "painting",
         image: "/images/p1.jpg",
@@ -28,7 +28,7 @@ const data = {
         description: "amazing painting",
       },
       {
-        _id: "2",
+        
         name: "sketch",
         category: "sketch",
         image: "/images/p2.jpg",
@@ -40,7 +40,7 @@ const data = {
         description: "beautifull sketch",
       },
       {
-        _id: "3",
+        
         name: "Pencil sketch",
         category: "sketch",
         image: "/images/p3.jpg",
@@ -52,7 +52,7 @@ const data = {
         description: "amazing sketch",
       },
       {
-        _id: "4",
+        
         name: "Fine sketch",
         category: "sketch",
         image: "/images/p4.jpg",
@@ -64,7 +64,7 @@ const data = {
         description: "amazing sketch",
       },
       {
-        _id: "5",
+        
         name: "face sculpture",
         category: "sculpture",
         image: "/images/p5.jpg",
@@ -76,7 +76,7 @@ const data = {
         description: "fantastic sculpture",
       },
       {
-        _id: "6",
+        
         name: "hall sketch",
         category: "sketch",
         image: "/images/p6.jpg",
@@ -88,7 +88,7 @@ const data = {
         description: "amazing sketch",
       },
       {
-        _id: "7",
+        
         name: "Mirror sketch",
         category: "sketch",
         image: "/images/p7.jpg",
@@ -100,7 +100,7 @@ const data = {
         description: "awesome sketch",
       },
       {
-        _id: "8",
+        
         name: "painting",
         category: "painting",
         image: "/images/p8.jpg",
