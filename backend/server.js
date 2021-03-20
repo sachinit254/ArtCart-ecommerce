@@ -22,6 +22,9 @@ mongoose.connect(process.env.MONGODB_URL || "mongodb://localhost/ArtCart", {
 app.use("/api/users", userRouter);
 app.use("/api/products", productRouter);
 app.use('/api/orders', orderRouter);
+app.get('/api/config/paypal', (req, res) => {
+  res.send(process.env.PAYPAL_CLIENT || 'sb');
+});
 app.get("/", (req, res) => {
   req.setEncoding("Server is ready");
 });
