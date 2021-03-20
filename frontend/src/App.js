@@ -2,8 +2,10 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { BrowserRouter, Link, Route } from "react-router-dom";
 import { signout } from "./actions/userActions";
+import PrivateRoute from './components/PrivateRoute';
 import CartScreen from "./screens/CartScreen";
 import HomeScreen from "./screens/HomeScreen";
+import OrderHistoryScreen from './screens/OrderHistoryScreen';
 import ProductScreen from "./screens/ProductScreen";
 import ShippingAddressScreen from './screens/ShippingAddressScreen';
 import SigninScreen from "./screens/SigninScreen";
@@ -11,6 +13,7 @@ import RegisterScreen from "./screens/RegisterScreen";
 import PaymentMethodScreen from "./screens/PaymentMethodScreen";
 import PlaceOrderScreen from "./screens/PlaceOrderScreen";
 import OrderScreen from "./screens/orderScreen";
+import ProfileScreen from "./screens/ProfileScreen";
 
 
 function App() {
@@ -45,6 +48,12 @@ function App() {
                   {userInfo.name} <i className="fa fa-caret-down"></i>
                 </Link>
                 <ul className="dropdown-content">
+                <li>
+                    <Link to="/profile">User Profile</Link>
+                  </li>
+                <li>
+                    <Link to="/orderhistory">Order History</Link>
+                  </li>
                   <li>
                     <Link to="#signout" onClick={signoutHandler}>
                       Sign Out
@@ -67,6 +76,11 @@ function App() {
           <Route path="/payment" component={PaymentMethodScreen}></Route>
           <Route path="/placeorder" component={PlaceOrderScreen}></Route>
           <Route path="/order/:id" component={OrderScreen}></Route>
+          <Route path="/orderhistory" component={OrderHistoryScreen}></Route>
+          <PrivateRoute
+            path="/profile"
+            component={ProfileScreen}
+          ></PrivateRoute>
           <Route path="/" component={HomeScreen} exact></Route>
         </main>
         <footer className="row center">All right reserved</footer>
