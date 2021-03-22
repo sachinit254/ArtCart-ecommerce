@@ -17,6 +17,7 @@ import OrderScreen from "./screens/orderScreen";
 import ProfileScreen from "./screens/ProfileScreen";
 import ProductListScreen from "./screens/ProductListScreen";
 import AdminRoute from "./components/AdminRoute";
+import OrderListScreen from "./screens/OrderListScreen";
 
 
 function App() {
@@ -112,6 +113,10 @@ function App() {
           <AdminRoute
             path="/productlist"
             component={ProductListScreen}
+          ></AdminRoute>
+           <AdminRoute
+            path="/orderlist"
+            component={OrderListScreen}
           ></AdminRoute>
           <Route path="/" component={HomeScreen} exact></Route>
         </main>
